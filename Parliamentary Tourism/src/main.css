@@ -1,0 +1,136 @@
+body{
+
+    background: #e9ecef;
+}
+.jumbotron {
+    padding: 1rem;
+    margin-bottom: 0;
+}
+#graph{
+    height: calc(100vh - 200px);
+    
+}
+#logo{
+    position: absolute;
+    top:30px;
+    left: 30px;
+}
+.dark-blue{fill:#005288}.light-blue{fill:#0096d6}.white{fill:#fff !important}
+.input-search{
+    background: transparent;
+    border-color: black;
+    padding: 0.3rem 1rem;
+    line-height: 1;
+    margin-top: 10px;
+    height: inherit;
+}
+.deputy-details-popup{
+    text-align: left;
+    font-size: 1rem;
+    width: 100%;
+}
+.deputy-details-popup tr{
+    border-bottom: 2px solid black;
+}
+.deputy-details-popup td{
+    padding: 10px 5px;
+}
+.deputy-details-popup ul{
+    list-style-type:none;
+    padding-inline-start : 0;
+}
+.slick-slide{
+    text-align: center;
+}
+.slick-slide:focus{
+    outline: none;
+}
+.slick-prev, .slick-next {
+    font-size: 18px;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: black;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev {
+    left: -25px;
+}
+.slick-next {
+    right: -25px;
+}
+.candidate-slick{
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+.map-selector{
+    padding: 15px;
+}
+.candidate-slick:hover h6{
+    display: block;
+}
+
+.candidate-slick img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.candidate-slick.candidate-active img{
+    border:3px solid #3388ff;
+}
+.candidate-slick.candidate-active h6{
+    background: #3388ff;
+    color: black;
+}
+.candidate-slick h6{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width:100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    display: none;
+    background: #333;
+    color: white;
+    padding-top: 40px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+#autocomplete-list{
+    list-style-type: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    text-align: left;
+    background: white;
+    padding: 0px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+#autocomplete-list li{
+    padding:15px;
+    cursor: pointer;
+}
+#autocomplete-list li:hover{
+    background-color:#0078A822;
+
+}
+.swal2-content{
+    z-index: 4!important;
+}
