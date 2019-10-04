@@ -167,6 +167,11 @@ am4core.ready(function () {
                 return "{name}"
         }
     });
+    chart.legend.labels.template.adapter.add("text",function(text,target){
+
+        return "{name} \n ({childrenLength} deputies)";
+
+    });
     networkSeries.fontSize = 8;
     networkSeries.maxLevels = 2;
     networkSeries.maxRadius = am4core.percent(6);

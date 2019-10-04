@@ -127,16 +127,6 @@ am4core.ready(function () {
     networkSeries.dataFields.children = "children";
     networkSeries.dataFields.color = "color";
 
-    /*networkSeries.nodes.template.adapter.add("fill",(text,target)=>{
-        if(target.dataItem.level>0 && target.dataItem.dataContext.deputyObject.siege===siege)
-            return "#000000"
-        else
-            return target.dataItem.dataContext.color;
-    }).*/
-
-
-//networkSeries.nodes.template.tooltipText = "{name} ({childrenLength} deputies)";
-
     networkSeries.nodes.template.adapter.add("tooltipHTML", function (text, target) {
         if (target.dataItem) {
             switch (target.dataItem.level) {
@@ -162,10 +152,15 @@ am4core.ready(function () {
     networkSeries.nodes.template.label.adapter.add("text",function(text,target){
         switch (target.dataItem.level) {
             case 0:
-                return "{name} \n ({childrenLength} deputés)";
+                return "{name} \n ({childrenLength} deputes)";
             case 1:
                 return "{name}"
         }
+    });
+    chart.legend.labels.template.adapter.add("text",function(text,target){
+
+        return "{name} \n ({childrenLength} deputés)";
+
     });
     networkSeries.fontSize = 8;
     networkSeries.maxLevels = 2;
