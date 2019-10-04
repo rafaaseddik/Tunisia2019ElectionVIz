@@ -159,7 +159,7 @@ am4core.ready(function () {
     });
     chart.legend.labels.template.adapter.add("text",function(text,target){
 
-        return "{name} \n ({childrenLength} deputés)";
+        return "{name} \n ({childrenLength} deputes)";
 
     });
     networkSeries.fontSize = 8;
