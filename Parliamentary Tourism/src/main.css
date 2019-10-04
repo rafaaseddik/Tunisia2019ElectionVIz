@@ -15,6 +15,12 @@ body{
     top:30px;
     left: 30px;
 }
+#flag-lang{
+    position: absolute;
+    top:30px;
+    right: 40px;
+    cursor: pointer;
+}
 .dark-blue{fill:#005288}.light-blue{fill:#0096d6}.white{fill:#fff !important}
 .input-search{
     background: transparent;

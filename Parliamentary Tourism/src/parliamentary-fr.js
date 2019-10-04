@@ -141,15 +141,15 @@ am4core.ready(function () {
         if (target.dataItem) {
             switch (target.dataItem.level) {
                 case 0:
-                    return "{name} ({childrenLength} deputies)";
+                    return "{name} ({childrenLength} deputés)";
                 case 1:
                     return `<div style="padding:15px">
                     <div class="text-center"><img src="{deputyObject.photo_url}" style="border-radius:50%;width:50px;height:50px" /></div>
                     <div class="text-center"><b>{deputyObject.name}</b></div>
-                    <div class="text-center">({deputyObject.age} years old)</div>
+                    <div class="text-center">({deputyObject.age} ans)</div>
                     <div class="text-center">-- {deputyObject.circ} -- </div>
                     <hr />
-                    <b>Electoral List : </b> {deputyObject.electoral_list}
+                    <b>Liste Electorale : </b> {deputyObject.electoral_list}
                     </div>`
             }
         }
@@ -162,7 +162,7 @@ am4core.ready(function () {
     networkSeries.nodes.template.label.adapter.add("text",function(text,target){
         switch (target.dataItem.level) {
             case 0:
-                return "{name} \n ({childrenLength} deputies)";
+                return "{name} \n ({childrenLength} deputés)";
             case 1:
                 return "{name}"
         }
@@ -176,28 +176,14 @@ am4core.ready(function () {
 
     networkSeries.nodes.template.events.on('hit', (e) => {
         let deputy = e.target.dataItem.dataContext.deputyObject;
-        /*
-        "name": "Sahbi Atig",
-            "url": "https://majles.marsad.tn/2014/fr/elus/Sahbi_Atig",
-            "age": "60",
-            "siege": "57",
-            "profession": "Chercheur universitaire",
-            "circ": "Ariana",
-            "photo_url": "https://majles.marsad.tn/2014/uploads/images/Sahbi_Atig.thumb50.png",
-            "electoral_list": "Mouvement Ennahdha",
-            "tourism": [{
-                "title": "Mouvement Ennahdha",
-                "startDate": "2014-12-01T00:00:00.000Z",
-                "endDate": "2019-10-06T00:00:00.000Z"
-            }]
-         */
+
         Swal.fire({
             title: deputy.name,
             html: `
         <img src="${deputy.photo_url}" style="border-radius:50%;width:100px;height:100px" />
         <table class="deputy-details-popup">
                 <tr>
-                    <td><b>Chair Number</b></td>
+                    <td><b>Siège N°</b></td>
                     <td>${deputy.siege}</td>
                 </tr>
                 <tr>
@@ -213,7 +199,7 @@ am4core.ready(function () {
                     <td>${deputy.circ}</td>
                 </tr>
                 <tr>
-                    <td><b>Electoral List</b></td>
+                    <td><b>Liste electorale</b></td>
                     <td>${deputy.electoral_list}</td>
                 </tr>
                 <tr>
