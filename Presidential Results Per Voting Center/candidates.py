@@ -1,0 +1,5 @@
+candidatesAR = ['سيف الدين مخلوف','عبيد بريكي','حاتم بولبيار','الناجي جلول','أحمد الصافي سعيد','سعيد العايدي','سلمى اللومي','سليم الرياحي','الياس الفخفاخ','قيس سعيّد','يوسف الشاهد','عمر منصور','عبد الفتاح مورو','محمد الهاشمي حامدي','محمد الصغير نوري','محسن مرزوق','عبد الكريم زبيدي','محمد المنصف المرزوقي','حمة همامي','حمادي الجبالي','المهدي جمعة','محمد لطفي المرايحي','نبيل القروي','عبير موسي','محمد المحرزي عبو','منجي الرحوي']
+
+candidatesFR = ['Mongi Rahoui','Mohamed Abbou','Abir Moussi','Nabil Karoui','Lotfi Mraihi','Mehdi Jomaa','Hamadi Jebali','Hamma Hammami','Moncef Marzouki','Abdelkrim Zbidi','Mohsen Marzouk','Mohamed Esghaier Nouri','Hechmi Hamdi','Abdelfattah Mourou','Omar Mansour','Youssef Chahed','Kaïs Saïed','Elyes Fakhfakh','Slim Riahi','Selma Elloumi Rekik','Saïd Aïdi','Safi Saïd','Néji Jalloul','Hatem Boulabiar','Abid Briki','Seifeddine Makhlouf']
+
+candidates= [{'nameAR':candidatesAR[::-1][i],'nameFR':candidatesFR[i]} for i in range(26)]
